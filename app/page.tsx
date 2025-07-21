@@ -102,14 +102,9 @@ export default function HomePage() {
       <Navigation />
 
       {/* Location and Time */}
-      <div className="absolute top-6 right-6 md:top-8 md:right-8 text-right text-gray-500 z-10">
-        <div className="text-lg">Gujarat, India</div>
-        <div className="text-2xl font-light">{currentTime} pm</div>
-      </div>
-
-      {/* Certified Partner Badge */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-4 py-8 transform rotate-90 origin-center z-20">
-        <div className="text-sm font-medium whitespace-nowrap">IT Graduate</div>
+      <div className="absolute top-16 right-6 sm:top-20 md:top-24 md:right-8 text-right text-gray-500 z-10">
+        <div className="text-sm sm:text-base md:text-lg">Gujarat, India</div>
+        <div className="text-lg sm:text-xl md:text-2xl font-light">{currentTime} pm</div>
       </div>
 
       {/* Main Content */}
@@ -117,14 +112,17 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="mb-32">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light leading-none mb-8 text-black">
-              Prince Bhesaniya is a <span className="block">frontend developer</span>
-              <span className="block">& UI/UX designer.</span>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-light leading-tight mb-8 text-black">
+              <span className="block mb-2 md:mb-4">
+                <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 md:px-4 py-1 md:py-2 inline-block rounded-2xl border-2 border-white/30 shadow-lg shadow-blue-600/25 backdrop-blur-sm">Prince Bhesaniya</span>
+              </span>
+              <span className="block">crafts exceptional</span>
+              <span className="block">digital experiences</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 max-w-2xl leading-relaxed mb-12">
-              Seeking challenging opportunities to expand and utilize my learning, skills, and knowledge in frontend
-              development. I possess excellent communication skills and have an eye for detail.
+              Transforming ideas into pixel-perfect, interactive web applications with React and modern frontend technologies. 
+              I bring creativity and technical expertise together to build solutions that users love.
             </p>
 
             {/* CTA Section */}
@@ -501,10 +499,6 @@ export default function HomePage() {
               <div className="flex items-center space-x-2 mb-2">
                 <span className="text-4xl font-bold text-black">SVPIT</span>
                 <div className="w-3 h-3 bg-black rounded-full"></div>
-              </div>
-              <div className="flex items-center space-x-1 mb-1">
-                <Award className="w-4 h-4 text-black" />
-                <span className="text-lg font-semibold ml-2">IT Graduate</span>
               </div>
               <div className="text-sm text-gray-600">Information Technology Engineering</div>
             </div>
