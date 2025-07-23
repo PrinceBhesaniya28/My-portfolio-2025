@@ -7,9 +7,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import {
-  Code,
-  Palette,
-  Smartphone,
   ExternalLink,
   Github,
   Mail,
@@ -201,39 +198,280 @@ export default function HomePage() {
 
           {/* Skills Section */}
           <div className="mb-32">
-            <h2 className="text-4xl md:text-6xl font-light mb-12 text-black">Technical Skills</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="group hover:bg-white p-8 rounded-lg transition-all duration-300 hover:shadow-lg">
-                <Code className="w-12 h-12 mb-6 text-blue-600" />
-                <h3 className="text-2xl font-medium mb-4 text-black">Frontend Development</h3>
-                <div className="space-y-2">
-                  {["HTML5", "CSS3", "JavaScript", "ReactJS"].map((skill) => (
-                    <div key={skill} className="text-gray-600">
-                      {skill}
+            <h2 className="text-4xl md:text-6xl font-light mb-12 text-black">Programming Languages</h2>
+            
+            {/* Infinite Scroll Container */}
+            <div className="relative overflow-hidden">
+              <div className="flex animate-scroll-seamless">
+                {/* First set of icons */}
+                <div className="flex items-center space-x-12 shrink-0 px-6">
+                  {/* JavaScript */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/javascript.png" 
+                        alt="JavaScript" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
                     </div>
-                  ))}
+                    <span className="mt-3 text-sm font-medium text-gray-600">JavaScript</span>
+                  </div>
+
+                  {/* HTML5 */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/html5.png" 
+                        alt="HTML5" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">HTML5</span>
+                  </div>
+
+                  {/* CSS3 */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/css3.png" 
+                        alt="CSS3" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">CSS3</span>
+                  </div>
+
+                  {/* React */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/react.png" 
+                        alt="React" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">React</span>
+                  </div>
+
+                  {/* Next.js */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/nextjs.svg" 
+                        alt="Next.js" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Next.js</span>
+                  </div>
+
+                  {/* Node.js */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/node.png" 
+                        alt="Node.js" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Node.js</span>
+                  </div>
+
+                  {/* Express.js */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/expressjs.png" 
+                        alt="Express.js" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Express.js</span>
+                  </div>
+
+                  {/* TypeScript */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/typescript.png" 
+                        alt="TypeScript" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">TypeScript</span>
+                  </div>
+
+                  {/* Git */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/git.png" 
+                        alt="Git" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Git</span>
+                  </div>
+
+                  {/* GitHub */}
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image 
+                        src="/github.png" 
+                        alt="GitHub" 
+                        width={64} 
+                        height={64} 
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">GitHub</span>
+                  </div>
                 </div>
-              </div>
-              <div className="group hover:bg-white p-8 rounded-lg transition-all duration-300 hover:shadow-lg">
-                <Palette className="w-12 h-12 mb-6 text-purple-600" />
-                <h3 className="text-2xl font-medium mb-4 text-black">Design & Tools</h3>
-                <div className="space-y-2">
-                  {["Figma", "UI/UX Design", "Prototyping", "Responsive Design"].map((skill) => (
-                    <div key={skill} className="text-gray-600">
-                      {skill}
+
+                {/* Second identical set */}
+                <div className="flex items-center space-x-12 shrink-0 px-6">
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/javascript.png" alt="JavaScript" width={64} height={64} className="object-contain" />
                     </div>
-                  ))}
+                    <span className="mt-3 text-sm font-medium text-gray-600">JavaScript</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/html5.png" alt="HTML5" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">HTML5</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/css3.png" alt="CSS3" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">CSS3</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/react.png" alt="React" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">React</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/nextjs.svg" alt="Next.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Next.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/node.png" alt="Node.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Node.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/expressjs.png" alt="Express.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Express.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/typescript.png" alt="TypeScript" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">TypeScript</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/git.png" alt="Git" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Git</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/github.png" alt="GitHub" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">GitHub</span>
+                  </div>
                 </div>
-              </div>
-              <div className="group hover:bg-white p-8 rounded-lg transition-all duration-300 hover:shadow-lg">
-                <Smartphone className="w-12 h-12 mb-6 text-green-600" />
-                <h3 className="text-2xl font-medium mb-4 text-black">Development Tools</h3>
-                <div className="space-y-2">
-                  {["Git", "GitHub", "Node.js", "Version Control"].map((skill) => (
-                    <div key={skill} className="text-gray-600">
-                      {skill}
+
+                {/* Third identical set */}
+                <div className="flex items-center space-x-12 shrink-0 px-6">
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/javascript.png" alt="JavaScript" width={64} height={64} className="object-contain" />
                     </div>
-                  ))}
+                    <span className="mt-3 text-sm font-medium text-gray-600">JavaScript</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/html5.png" alt="HTML5" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">HTML5</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/css3.png" alt="CSS3" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">CSS3</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/react.png" alt="React" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">React</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/nextjs.svg" alt="Next.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Next.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/node.png" alt="Node.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Node.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/expressjs.png" alt="Express.js" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Express.js</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/typescript.png" alt="TypeScript" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">TypeScript</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/git.png" alt="Git" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">Git</span>
+                  </div>
+                  <div className="flex flex-col items-center group">
+                    <div className="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                      <Image src="/github.png" alt="GitHub" width={64} height={64} className="object-contain" />
+                    </div>
+                    <span className="mt-3 text-sm font-medium text-gray-600">GitHub</span>
+                  </div>
                 </div>
               </div>
             </div>
