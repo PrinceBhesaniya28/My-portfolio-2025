@@ -143,14 +143,14 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-gray-600" />
                     <div>
                       <div className="font-medium text-black">Email</div>
-                      <div className="text-gray-600">prince.bhesaniya@email.com</div>
+                      <div className="text-gray-600">princebhesaniya55@gmail.com</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <Phone className="w-6 h-6 text-gray-600" />
                     <div>
                       <div className="font-medium text-black">Phone</div>
-                      <div className="text-gray-600">+91 98765 43210</div>
+                      <div className="text-gray-600">+919904395990</div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">

@@ -21,32 +21,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "Nike E-commerce Design",
-    category: "UI/UX Design",
-    description:
-      "Modern e-commerce page design for Nike shoes created in Figma, focusing on user experience and visual appeal with contemporary design principles.",
-    image: "/placeholder.svg?height=400&width=600&text=Nike+Ecommerce+Design",
-    technologies: ["Figma", "UI/UX Design", "Prototyping", "E-commerce"],
-    liveUrl: "#",
-    githubUrl: "#",
-    type: "Design Project",
-    year: "2023",
-  },
-  {
-    id: 3,
-    title: "Bluorng Mobile Web Design",
-    category: "Mobile Design",
-    description:
-      "Responsive web page design for clothing company Bluorng, optimized for mobile screens with auto-delay effects and smooth animations.",
-    image: "/placeholder.svg?height=400&width=600&text=Bluorng+Mobile+Design",
-    technologies: ["Figma", "Mobile Design", "Animation", "UX Research"],
-    liveUrl: "#",
-    githubUrl: "#",
-    type: "Design Project",
-    year: "2023",
-  },
-  {
-    id: 4,
     title: "Sign In/Sign Up Pages",
     category: "UI Design",
     description:
@@ -59,7 +33,7 @@ const projects = [
     year: "2023",
   },
   {
-    id: 5,
+    id: 3,
     title: "Freelance UI/UX Project",
     category: "Web Application Design",
     description:
@@ -72,7 +46,7 @@ const projects = [
     year: "2023",
   },
   {
-    id: 6,
+    id: 4,
     title: "React Development Projects",
     category: "Frontend Development",
     description:

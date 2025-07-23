@@ -33,29 +33,6 @@ const featuredProjects = [
     githubUrl: "#",
     type: "Personal Project",
   },
-  {
-    id: 2,
-    title: "Nike E-commerce Design",
-    category: "UI/UX Design",
-    description: "Modern e-commerce page design for Nike shoes with focus on user experience and visual appeal.",
-    image: "/placeholder.svg?height=400&width=600&text=Nike+Ecommerce+Design",
-    technologies: ["Figma", "UI/UX Design", "Prototyping"],
-    liveUrl: "#",
-    githubUrl: "#",
-    type: "Design Project",
-  },
-  {
-    id: 3,
-    title: "Bluorng Mobile Web Design",
-    category: "Mobile Design",
-    description:
-      "Responsive web page design for clothing company with auto-delay effects optimized for mobile screens.",
-    image: "/placeholder.svg?height=400&width=600&text=Bluorng+Mobile+Design",
-    technologies: ["Figma", "Mobile Design", "Animation", "UX Research"],
-    liveUrl: "#",
-    githubUrl: "#",
-    type: "Freelance Project",
-  },
 ]
 
 export default function HomePage() {
@@ -163,35 +140,104 @@ export default function HomePage() {
           {/* Experience Section */}
           <div className="mb-32">
             <h2 className="text-4xl md:text-6xl font-light mb-12 text-black">Experience</h2>
-            <div className="bg-white p-8 rounded-lg">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                <div>
-                  <h3 className="text-2xl font-medium text-black mb-2">Junior Frontend React Developer</h3>
-                  <div className="text-lg text-gray-600 mb-2">Opul Design</div>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    March 2023 - August 2024 (1 year 6 months)
+            <div className="space-y-6">
+              {/* Current: Content Writer */}
+              <div className="bg-white p-8 rounded-lg">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-medium text-black mb-2">Content Writer</h3>
+                    <div className="text-lg text-gray-600 mb-2">ScribbleDao & CoinDCX</div>
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      January 2025 - Present
+                    </div>
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                      Current Role
+                    </span>
                   </div>
                 </div>
-                <div className="mt-4 md:mt-0">
-                  <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-                    Recent Experience
-                  </span>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Creating engaging and informative content for blockchain and cryptocurrency platforms. Writing technical articles, 
+                  documentation, and marketing copy for ScribbleDao and CoinDCX, helping to educate users about blockchain technology 
+                  and trading strategies.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Content Writing", "Blockchain", "Cryptocurrency", "Technical Documentation", "Marketing Copy"].map(
+                    (skill) => (
+                      <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Worked extensively with ReactJS and frontend development, collaborating with a dynamic team of
-                developers to design and implement responsive, user-friendly web applications. Gained hands-on
-                experience in modern frontend technologies and agile development practices.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {["ReactJS", "Frontend Development", "Team Collaboration", "Responsive Design", "Web Applications"].map(
-                  (skill) => (
-                    <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                      {skill}
+
+              {/* Current: Freelance Web Developer */}
+              <div className="bg-white p-8 rounded-lg">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-medium text-black mb-2">Freelance Web Developer</h3>
+                    <div className="text-lg text-gray-600 mb-2">Self-Employed</div>
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      September 2024 - Present
+                    </div>
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">
+                      Ongoing
                     </span>
-                  ),
-                )}
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Providing custom web development solutions for various clients, specializing in modern frontend technologies. 
+                  Building responsive websites, web applications, and e-commerce solutions using React, Next.js, and TypeScript. 
+                  Managing full project lifecycle from client consultation to deployment.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["React", "Next.js", "TypeScript", "Freelancing", "Client Management", "Full-Stack Development"].map(
+                    (skill) => (
+                      <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+
+              {/* Previous: Junior Frontend React Developer */}
+              <div className="bg-white p-8 rounded-lg">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-medium text-black mb-2">Junior Frontend React Developer</h3>
+                    <div className="text-lg text-gray-600 mb-2">Opul Design</div>
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      March 2023 - August 2024 (1 year 6 months)
+                    </div>
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <span className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+                      Previous Role
+                    </span>
+                  </div>
+                </div>
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  Worked extensively with ReactJS and frontend development, collaborating with a dynamic team of
+                  developers to design and implement responsive, user-friendly web applications. Gained hands-on
+                  experience in modern frontend technologies and agile development practices.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["ReactJS", "Frontend Development", "Team Collaboration", "Responsive Design", "Web Applications"].map(
+                    (skill) => (
+                      <span key={skill} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ),
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -675,7 +721,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="font-medium text-black">Email</div>
-                        <div className="text-gray-600">prince.bhesaniya@email.com</div>
+                        <div className="text-gray-600">princebhesaniya55@gmail.com</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
@@ -684,7 +730,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <div className="font-medium text-black">Phone</div>
-                        <div className="text-gray-600">+91 98765 43210</div>
+                        <div className="text-gray-600">+919904395990</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
@@ -735,7 +781,7 @@ export default function HomePage() {
             {/* Achievement */}
             <div className="mb-8 md:mb-0">
               <div className="flex items-center space-x-2 mb-2">
-                <span className="text-4xl font-bold text-black">SVPIT</span>
+                <span className="text-4xl font-bold text-black">SVIT</span>
                 <div className="w-3 h-3 bg-black rounded-full"></div>
               </div>
               <div className="text-sm text-gray-600">Information Technology Engineering</div>

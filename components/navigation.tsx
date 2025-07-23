@@ -25,13 +25,14 @@ export default function Navigation() {
           PB
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8 text-lg">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-24 text-xl absolute left-1/2 transform -translate-x-1/2">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className={`transition-colors ${
-                pathname === item.href ? "text-black font-medium" : "text-gray-600 hover:text-black"
+              className={`px-6 py-3 rounded-full border-2 border-transparent transition-all duration-300 ease-in-out hover:border-black hover:text-black ${
+                pathname === item.href ? "text-black font-medium border-black" : "text-gray-600"
               }`}
             >
               {item.name}
@@ -39,13 +40,20 @@ export default function Navigation() {
           ))}
         </div>
 
-        <button className="flex items-center space-x-2 text-lg z-40" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        {/* Mobile Menu Button */}
+        <button 
+          className="flex items-center space-x-2 text-lg z-40 md:hidden" 
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           <span className="text-black">Menu</span>
           {isMenuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
         </button>
+
+        {/* Desktop Spacer */}
+        <div className="hidden md:block"></div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-20 md:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-8 text-2xl">
